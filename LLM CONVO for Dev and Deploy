@@ -1,0 +1,135 @@
+Me: I need to use Drafter. How should I organize the routes?
+
+ChatGPT: We can use separate routes for each major page and action:
+
+index – Homepage
+
+dashboard – Displays saved policies
+
+add_policy – Shows the policy form
+
+save_policy – Saves a new policy
+
+policy_details – Displays policy information
+
+edit_policy – Shows the editing form
+
+update_policy – Updates a policy
+
+compare_policies – Compares saved policies
+
+about – Explains the website
+
+This gives the project more than the required seven routes and five pages.
+
+Me: I also need multiple inputs, conditionals, and loops.
+
+ChatGPT: The policy form can use TextBoxes for the name, premium, probability, and claim cost. Conditional statements can validate inputs and display different messages. A loop can iterate through the saved policies to display them on the dashboard or comparison page.
+
+Me: How should I calculate the expected loss?
+
+ChatGPT: Multiply the claim probability by the estimated claim cost. Make sure the probability is represented as a decimal. For example, 15% should be entered as 0.15.
+
+Me: I ran the program in Thonny, but I can't see anything.
+
+ChatGPT: Let's check the terminal output and the browser address. Drafter should provide a local address when the server starts. You can open that address in your browser to view the website.
+
+Me: It says the server is running at localhost:8000, but I'm seeing a default Hello World page.
+
+ChatGPT: That suggests Drafter is loading its default homepage instead of your intended homepage. Your homepage function is named home, but Drafter expects an index route. We can add an index route that calls home(state).
+
+Me: There we go! It's showing up now.
+
+ChatGPT: Great! Now we should test the individual pages and make sure the navigation works.
+
+Me: I added a test policy. It has an $800 premium, a 0.15 claim probability, and a $3,000 estimated claim cost.
+
+ChatGPT: The expected claim cost should be:
+
+0.15 × 3000 = $450
+
+If the website displays $450, that calculation is working correctly.
+
+Me: It does. Editing works too.
+
+ChatGPT: Excellent. That means the main policy management features are functioning. We should also test the comparison page and make sure the website handles missing or invalid inputs.
+
+Me: How do I get this website online?
+
+ChatGPT: We can deploy it using GitHub Pages. First, create a GitHub account and a public repository named ActuaryHub.
+
+Me: Done. GitHub gave me a URL.
+
+ChatGPT: Perfect. Upload the project files. At minimum, include your main Python file and any other files the website needs. You should also include your brainstorming worksheet, design worksheet, and AI conversation documentation.
+
+Me: What about the deployment files?
+
+ChatGPT: We need a GitHub Actions workflow so GitHub knows how to build the Drafter website and publish it through GitHub Pages.
+
+Me: Where does that go?
+
+ChatGPT: Create a new file at:
+
+.github/workflows/deploy.yml
+
+This tells GitHub what steps to follow when deploying your project.
+
+Me: I added it. What now?
+
+ChatGPT: Go to the Actions tab in your repository. You should be able to find the deployment workflow there. If necessary, use the Run workflow button to start it manually.
+
+6. Deploying ActuaryHub
+
+Me: I don't see Deploy to Pages in Actions.
+
+ChatGPT: Let's check whether the workflow file is in the correct location. It needs to be inside .github/workflows/, and its filename should be deploy.yml.
+
+Me: I found the issue. I didn't have the folder.
+
+ChatGPT: That's okay. Create the folders through GitHub's Create new file option by entering the full path. Then paste in the deployment YAML and commit the changes.
+
+Me: It says Run workflow. Should I click it?
+
+ChatGPT: Yes. Leave the branch set to main and click Run workflow. Then check the latest run for a green check or a red X.
+
+Me: Check.
+
+ChatGPT: The deployment runs completed successfully! Your website is published.
+
+Me: YAY!
+
+ChatGPT: Congratulations! ActuaryHub is officially online.
+
+7. Final Reflection
+
+Me: This project was a lot more work than I expected.
+
+ChatGPT: That's understandable. You went through several stages: planning the program, designing dataclasses, implementing routes, testing calculations, fixing navigation, and deploying the finished website.
+
+Me: What are some things I learned from this project?
+
+ChatGPT: Some important skills you practiced include:
+
+Using dataclasses to organize information.
+
+Managing application state.
+
+Creating multiple routes with Drafter.
+
+Working with user inputs.
+
+Using loops and conditional statements.
+
+Performing calculations with user-provided data.
+
+Testing and debugging a Python application.
+
+Using GitHub to store and deploy a project.
+
+Me: Anything else I should do before submitting?
+
+ChatGPT: Make sure your public repository contains the working source code, necessary supporting files, brainstorming and design worksheets, and the required AI conversation documentation. Open the deployed website one last time to verify that it works.
+
+Me: Alright, thanks for all the help.
+
+ChatGPT: You're welcome! Good luck with your CISC106 final project. ActuaryHub went from an idea to a working website, and that's something worth being proud of.
